@@ -4,7 +4,7 @@ class CreateBlogEntries < ActiveRecord::Migration
       t.string :title
       t.text :body
       t.integer :author_id
-      t.boolean :state :default false
+      t.boolean :state, default: false
       t.timestamps
     end
   end
