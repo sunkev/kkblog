@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130910211630) do
+ActiveRecord::Schema.define(version: 20130910211800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 20130910211630) do
   create_table "categeories_for_blogs", force: true do |t|
     t.integer  "blog_entry_id"
     t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
